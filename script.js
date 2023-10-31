@@ -8,17 +8,17 @@ function playGuessingGame(numToGuess, totalGuesses = 10){
          return 0
       }
       else if(num === "" || isNaN(num)) {
-         promptText = "Please enter a number"
+         promptText = "Please enter a number."
          guesses = guesses - 1
       }
       else if(num == numToGuess){
          return guesses
       }
       else if(num < numToGuess){
-         promptText = "Number is too small.  Guess a larger number."
+         promptText = num + " is too small. Guess a larger number."
       }
       else {
-         promptText = "Number is too large.  Guess a smaller number."
+         promptText = num + " is too large. Guess a smaller number."
       } 
    }
    return 0;
