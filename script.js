@@ -24,4 +24,4 @@ function playGuessingGame(numToGuess, totalGuesses = 10){
    return 0;
 }
 
-
+playGuessingGame(54)
