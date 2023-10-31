@@ -1,9 +1,27 @@
 // Your solution goes here 
-let tvShow = prompt();
+function playGuessingGame(numToGuess, totalGuesses = 10){
+   let promptText = "Enter a number between 1 and 100."   
+   for(let guesses = 1; guesses <= totalGuesses; guesses++){
+      let num = prompt(promptText)
+      
+      if(num === null) {
+         return 0
+      }
+      else if(num === "" || isNaN(num)) {
+         promptText = "Please enter a number"
+         guesses = guesses - 1
+      }
+      else if(num == numToGuess){
+         return guesses
+      }
+      else if(num < numToGuess){
+         promptText = "Number is too small.  Guess a larger number."
+      }
+      else {
+         promptText = "Number is too large.  Guess a smaller number."
+      } 
+   }
+   return 0;
+}
 
-if (tvShow === null) {
-   console.log("You did not enter a TV show.");
-}
-else {
-   console.log(tvShow + " dididid   is your favorite TV show!");
-}
+
